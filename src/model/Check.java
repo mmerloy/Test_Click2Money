@@ -1,12 +1,8 @@
 package model;
 
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 
 /**
- *
  * @author mmerloy
  */
 public class Check
@@ -25,7 +21,7 @@ public class Check
             {
                 CorrectValues = true;
                 number = in.nextInt();
-                if(number < 0)
+                if (number < 0)
                     throw new InputMismatchException ();
             }
             catch (InputMismatchException e)

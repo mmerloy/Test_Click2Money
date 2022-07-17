@@ -11,11 +11,11 @@ import java.util.function.Function;
  * @version 0.0.5
  * @since 18.07.2022 2:36
  */
-public class Controller {
+public class Controller
+{
 
-    //Вопросы
-    public static void main(String[] args) {
-
+    public static void main(String[] args)
+    {
         while (true)
         {
             int choose = 0, m;
@@ -73,7 +73,6 @@ public class Controller {
                 default ->
                         View.print("Программа не может принять такой ответ, попробуйте еще раз.");
             }
-
         }
     }
 }
