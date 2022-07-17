@@ -2,6 +2,9 @@ package view;
 
 public class View
 {
+    /**
+     * mainMenu()- выводит начальное меню пользователя для выбора способа вычисления.
+     */
     public static void mainMenu()
     {
         System.out.println("Вычисление последовательности Фибоначчи ");
@@ -9,6 +12,10 @@ public class View
         System.out.println("Рекурсия............................. 1 ");
         System.out.println("Улучшенная рекурсия.................. 2 ");
     }
+
+    /**
+     * userMenu()- выводит меню пользователя для выбора способа вывода полученных вычислений.
+     */
     public static void userMenu()
     {
         System.out.println("1 - одно число, которое находится на n-ом месте последовательности");
@@ -22,7 +29,6 @@ public class View
      * Метод print - выводит на устройство вывода значение свойства или строку
      * @param message передаем ключ для отображения значения свойства или строку для печати
      */
-
     public static void print(String message)
     {
         System.out.println( message +"\n");
@@ -39,7 +45,6 @@ public class View
     {
         System.out.println("\n---------------------------------------------------");
     }
-
 
     public static void showMenuTitle(TitlesType menuType){
         switch (menuType)
