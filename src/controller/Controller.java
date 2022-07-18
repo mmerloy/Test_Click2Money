@@ -13,15 +13,17 @@ import java.util.function.Function;
  */
 public class Controller
 {
-
-    public static void main(String[] args)
+    /**
+     * Метод scenario() - основной сценарий программы
+     */
+    public static void scenario()
     {
         while (true)
         {
-            int choose = 0, m;
+            int choose = 0, m;//переменные для выбора пунктов меню.
             View.mainMenu();
             m = Check.intCheck();
-            Function<Integer, BigInteger> fibonacciFunc = Fibonacci::fastFibonacciRecursion;
+            Function<Integer, BigInteger> fibonacciFunc = Fibonacci::fastFibonacci;//определение метода fastFibonacci для выполнения по умолчанию
             if (m == 1)
             {
                 fibonacciFunc = Fibonacci::fibonacciRecursion;
@@ -74,5 +76,13 @@ public class Controller
                         View.print("Программа не может принять такой ответ, попробуйте еще раз.");
             }
         }
+    }
+    /**
+     * main
+     * @param args - аргументы
+     */
+    public static void main(String[] args)
+    {
+        scenario();
     }
 }

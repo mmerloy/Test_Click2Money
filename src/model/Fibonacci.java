@@ -4,7 +4,10 @@ import java.math.BigInteger;
 
 public class Fibonacci
 {
-    //вывод конкретного члена в последовательности Фибоначчи
+    /**
+     * fibonacciRecursion вычисление последовательности Фибоначчи с помощью рекурсии
+     * @param num - номер элемента пос-ти, до которого необходимо вычисление пос-ти Фибоначчи.
+     */
     public static BigInteger fibonacciRecursion(int num)
     {
         if (num <= 1) {
@@ -16,16 +19,24 @@ public class Fibonacci
         }
     }
 
-    public static BigInteger fastFibonacciRecursion(int n)
+    /**
+     * fastFibonacci вычисление последовательности Фибоначчи с помощью квадрирования.
+     * @param n - номер элемента пос-ти, до которого необходимо вычисление пос-ти Фибоначчи.
+     */
+    public static BigInteger fastFibonacci(int n)
     {
         if(n <= 1) new BigInteger("0");
         if(n == 2) new BigInteger("1");
-        BigInteger[] sol = fibHelp(n);
+        BigInteger[] sol = fastFibonacciHelp(n);
 
         return sol[1];
     }
 
-    public static BigInteger[] fibHelp(int n)
+    /**
+     * fastFibonacciHelp метод, помогающий в вычислении пос-ти Фибоначчи.
+     * @param n - номер элемента пос-ти необходимого для вычисления пос-ти Фибоначчи.
+     */
+    public static BigInteger[] fastFibonacciHelp(int n)
     {
         if(n == 1)
         {
@@ -36,7 +47,7 @@ public class Fibonacci
         }
         int m = n / 2;
 
-        BigInteger[] temp = fibHelp(m);
+        BigInteger[] temp = fastFibonacciHelp(m);
 
         BigInteger fPrev = temp[0];
         BigInteger fCur = temp[1];

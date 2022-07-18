@@ -7,7 +7,9 @@ import java.util.*;
  */
 public class Check
 {
-
+    /**
+     * intCheck()- метод для проверки вводимых пользователем значений на соответствие типу integer
+     */
     public static int intCheck()
     {
         int number = 0;
